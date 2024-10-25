@@ -4,7 +4,7 @@ const product = document.getElementById('product');
 const quantity = document.getElementById('quantity');
 const totalPrice = document.getElementById('price');
 const submit = document.getElementById('submit');
-const orderSummary = document.getElementById('order-summary');
+const order = document.getElementById('order');
 
 //Task 2: Add Event Listener for Product Selection
 
@@ -21,11 +21,12 @@ function calculateTotalPrice() { //Using function to calculate total price
 product.addEventListener('change', calculateTotalPrice); // Using eventListener to change price when different options from dropdown menu are selected
 quantity.addEventListener('input', calculateTotalPrice); // Using eventListener to change price when different quantity inputs are entered
 
-// // Handle order submission
-// placeOrderButton.addEventListener('click', function() {
-//     const selectedProduct = productSelector.options[productSelector.selectedIndex].text;
-//     const quantity = quantityInput.value;
-//     const totalPrice = totalPriceElement.textContent;
+// Task 4: Handle order submission
+
+submit.addEventListener('click', function() {
+    const chosenProduct = product.options[product.selectedIndex].text;
+    const number = quantity.value;
+    const finalPrice = totalPrice.textContent 
     
-//     orderSummary.textContent = `You ordered ${quantity} of ${selectedProduct}. Total price: $${totalPrice}`;
-// });
+    order.textContent = `You ordered ${number} of ${chosenProduct}. ${finalPrice}`;
+});
