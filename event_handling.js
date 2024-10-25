@@ -23,10 +23,10 @@ quantity.addEventListener('input', calculateTotalPrice); // Using eventListener 
 
 // Task 4: Handle order submission
 
-submit.addEventListener('click', function() {
+submit.addEventListener('click', function() { //Use function to activate submit button
     const chosenProduct = product.options[product.selectedIndex].text;
     const number = quantity.value;
     const finalPrice = totalPrice.textContent 
     
-    order.textContent = `You ordered ${number} of ${chosenProduct}. ${finalPrice}`;
+    order.textContent = `You ordered ${number} of ${chosenProduct}. ${finalPrice}`; // Display message on html
 });
